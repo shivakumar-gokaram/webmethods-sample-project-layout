@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webMethodsTestSuite description="" name="OnlienPay100.xml">
+    <webMethodsTestCase mocksEnabled="false" name="Transferlessthan100">
+        <mock folder="" name="">
+            <pipeline/>
+        </mock>
+        <service folder="stp" name="OnlinePayLimit100">
+            <input>
+                <file filename="resources\test\xml\data\LT100Input"/>
+            </input>
+            <expected>
+                <file filename="resources\test\xml\data\LT100Output"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+    <webMethodsTestCase name="TransferGreaterthan100">
+        <service folder="stp" name="OnlinePayLimit100">
+            <input>
+                <file filename="resources\test\xml\data\GT100Input"/>
+            </input>
+            <expected>
+                <file filename="resources\test\xml\data\GT100Output"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+</webMethodsTestSuite>
